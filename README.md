@@ -4,6 +4,7 @@ https://movie-app-kappa-khaki.vercel.app/
 
 #Admin url
 https://movie-app-admin-kappa-khaki.vercel.app/ 
+
 login as user
 
 username=user123
