@@ -1,5 +1,5 @@
 const formatImageUrl = imagePath => {
-  return `http://localhost:5000${imagePath}` // Prepend the base URL
+  return `https://movie-app-backend-production-21f6.up.railway.app${imagePath}` // Prepend the base URL
 }
 
 export default formatImageUrl
