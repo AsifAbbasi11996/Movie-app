@@ -24,7 +24,7 @@ const MovieDetail = () => {
     const fetchMovieDetail = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/movies/get/${movieId}`
+          `https://movie-app-backend-production-21f6.up.railway.app/api/movies/get/${movieId}`
         )
         setMovie(response.data)
         setLoading(false)

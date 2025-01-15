@@ -33,7 +33,7 @@ const EditMovie = () => {
     const fetchMovie = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/movies/get/${id}`
+          `https://movie-app-backend-production-21f6.up.railway.app/api/movies/get/${id}`
         )
         const movieData = response.data
         setMovie(movieData)
@@ -98,7 +98,7 @@ const EditMovie = () => {
     try {
       const token = localStorage.getItem('token')
       const response = await axios.put(
-        `http://localhost:5000/api/movies/update/${id}`,
+        `https://movie-app-backend-production-21f6.up.railway.app/api/movies/update/${id}`,
         formData,
         {
           headers: {

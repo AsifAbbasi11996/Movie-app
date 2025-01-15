@@ -21,7 +21,7 @@ const HomePage = () => {
     // Fetch all movies from backend
     const fetchMovies = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/movies')
+        const response = await axios.get('https://movie-app-backend-production-21f6.up.railway.app/api/movies')
         setMovies(response.data)
         setLoading(false)
       } catch (err) {

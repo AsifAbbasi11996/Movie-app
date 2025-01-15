@@ -20,7 +20,7 @@ const LoginPage = () => {
   const handleLogin = async () => {
     try {
       const { data } = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://movie-app-backend-production-21f6.up.railway.app/api/auth/login',
         { email, password }
       )
       localStorage.setItem('token', data.token)

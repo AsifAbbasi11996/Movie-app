@@ -72,7 +72,7 @@ const AddMovie = () => {
       const token = localStorage.getItem('token')
 
       const response = await axios.post(
-        'http://localhost:5000/api/movies/add',
+        'https://movie-app-backend-production-21f6.up.railway.app/api/movies/add',
         formData,
         {
           headers: {

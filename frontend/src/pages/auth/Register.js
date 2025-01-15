@@ -28,7 +28,7 @@ const Register = () => {
 
     // Make a request to register the user (you'll need to make an API call here)
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const response = await fetch('https://movie-app-backend-production-21f6.up.railway.app/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

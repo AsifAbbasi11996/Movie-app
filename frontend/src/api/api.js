@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api' // Replace with your backend URL
+  baseURL: 'https://movie-app-backend-production-21f6.up.railway.app/api' // Replace with your backend URL
 })
 
 // Add authorization header if the user is logged in
