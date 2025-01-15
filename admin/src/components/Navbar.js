@@ -37,7 +37,7 @@ const Navbar = () => {
         <Typography
           variant='h6'
           sx={{ flexGrow: 1 }}
-          onClick={() => navigate('/')} // Navigate to home when clicked
+          onClick={() => navigate('/movies')} // Navigate to home when clicked
           style={{ cursor: 'pointer' }}
         >
           MovieApp
