@@ -1,8 +1,8 @@
-#Movie App
-# Website Url
+# Movie App
+#Website Url
 https://movie-app-kappa-khaki.vercel.app/ 
 
-# Admin url
+#Admin url
 https://movie-app-admin-kappa-khaki.vercel.app/ 
 login as user
 
