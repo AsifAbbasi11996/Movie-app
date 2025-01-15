@@ -18,10 +18,14 @@ const MovieList = () => {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
 
+  console.log()
+
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get('https://movie-app-backend-production-21f6.up.railway.app/api/movies')
+        const response = await axios.get(
+          'https://movie-app-backend-production-21f6.up.railway.app/api/movies'
+        )
         setMovies(response.data)
       } catch (err) {
         setError('Failed to fetch movies')
@@ -57,7 +61,7 @@ const MovieList = () => {
                     height: 80, // Set height of the image
                     objectFit: 'cover', // Ensures the image covers the container while maintaining aspect ratio
                     borderRadius: '8px', // Optional: Adds rounded corners to the image
-                    boxShadow: 2, // Optional: Adds shadow to the image for a 3D effect
+                    boxShadow: 2 // Optional: Adds shadow to the image for a 3D effect
                   }}
                 />
               </ListItemAvatar>
@@ -68,6 +72,21 @@ const MovieList = () => {
                     <Typography variant='body2' color='text.primary'>
                       {movie.description}
                     </Typography>
+                    <Button
+                      component={Link}
+                      to={`/movie/${movie._id}`}
+                      variant='contained'
+                      color='primary'
+                      size='small'
+                      sx={{
+                        boxShadow: 2,
+                        '&:hover': {
+                          backgroundColor: '#1976d2'
+                        }
+                      }}
+                    >
+                      View Details
+                    </Button>
                     <Button
                       component={Link}
                       to={`/edit/${movie._id}`}

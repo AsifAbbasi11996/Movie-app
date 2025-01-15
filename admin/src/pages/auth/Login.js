@@ -25,7 +25,7 @@ const LoginPage = () => {
       )
       localStorage.setItem('token', data.token)
       localStorage.setItem('user', JSON.stringify(data.user)) // Store user info
-      navigate('/')
+      navigate('/movies')
     } catch (err) {
       setError('Invalid credentials. Please try again.')
     }
@@ -95,18 +95,6 @@ const LoginPage = () => {
           >
             Login
           </Button>
-
-          {/* Register Link */}
-          <Grid container justifyContent='center'>
-            <Grid item>
-              <Typography variant='body2'>
-                Don't have an account?{' '}
-                <Button color='secondary' onClick={() => navigate('/register')}>
-                  Register
-                </Button>
-              </Typography>
-            </Grid>
-          </Grid>
         </Box>
       </Box>
     </Container>

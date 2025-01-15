@@ -15,9 +15,9 @@ function App () {
     <Router>
       <Navbar /> {/* Add Navbar here */}
       <Routes>
-        <Route path='/' element={<HomePage />} />{' '}
+        <Route path='/' element={<MovieList />} />{' '}
         {/* Updated to use element prop */}
-        <Route path='/movies' element={<MovieList />} />{' '}
+        <Route path='/movies' element={<HomePage />} />{' '}
         <Route path='/add' element={<AddMovie />} />{' '}
         <Route path='/edit/:id' element={<EditMovie />} />{' '}
         <Route path='/search' element={<Search />} />{' '}

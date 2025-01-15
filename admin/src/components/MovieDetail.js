@@ -36,22 +36,10 @@ const MovieDetail = () => {
     fetchMovieDetail()
   }, [movieId]) // Re-fetch movie details if movieId changes
 
-  // While loading the movie details, show a loading spinner
   if (loading) {
     return (
       <Container>
         <CircularProgress />
-      </Container>
-    )
-  }
-
-  // Check if the movie data exists, and only then render the details
-  if (!movie) {
-    return (
-      <Container>
-        <Typography variant='h5' color='error'>
-          Movie not found
-        </Typography>
       </Container>
     )
   }
@@ -63,66 +51,55 @@ const MovieDetail = () => {
         <Grid item xs={12} md={4}>
           <Card>
             <CardMedia
-              component='img'
+              component="img"
               alt={movie.title}
-              height='500'
-              image={formatImageUrl(movie.image[1])} // Assuming the second image is the main one
+              height="500"
+              image={formatImageUrl(movie.image[1])}
             />
           </Card>
         </Grid>
 
         {/* Movie Details Section */}
         <Grid item xs={12} md={8}>
-          <Typography variant='h3' sx={{ marginBottom: 2 }}>
+          <Typography variant="h3" sx={{ marginBottom: 2 }}>
             {movie.title}
           </Typography>
-          <Typography
-            variant='h6'
-            color='textSecondary'
-            sx={{ marginBottom: 2 }}
-          >
+          <Typography variant="h6" color="textSecondary" sx={{ marginBottom: 2 }}>
             Directed by: {movie.director}
           </Typography>
 
           {/* Genre Chips */}
           <Box sx={{ marginBottom: 2 }}>
-            <Typography variant='h6'>Genres:</Typography>
+            <Typography variant="h6">Genres:</Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
               {movie.genre.map((genre, index) => (
-                <Chip
-                  key={index}
-                  label={genre}
-                  sx={{ margin: 0.5 }}
-                  color='primary'
-                />
+                <Chip key={index} label={genre} sx={{ margin: 0.5 }} color="primary" />
               ))}
             </Box>
           </Box>
 
           {/* Cast Section */}
           <Box sx={{ marginBottom: 2 }}>
-            <Typography variant='h6'>Cast:</Typography>
-            <Typography variant='body1'>{movie.cast.join(', ')}</Typography>
+            <Typography variant="h6">Cast:</Typography>
+            <Typography variant="body1">{movie.cast.join(', ')}</Typography>
           </Box>
 
           {/* Movie Description */}
           <Box sx={{ marginBottom: 2 }}>
-            <Typography variant='h6'>Description:</Typography>
-            <Typography variant='body1'>{movie.description}</Typography>
+            <Typography variant="h6">Description:</Typography>
+            <Typography variant="body1">{movie.description}</Typography>
           </Box>
 
           {/* Rating and Duration */}
           <Box sx={{ marginBottom: 2 }}>
-            <Typography variant='h6'>Rating: {movie.rating}</Typography>
-            <Typography variant='body1'>
-              Duration: {movie.duration} min
-            </Typography>
+            <Typography variant="h6">Rating: {movie.rating}</Typography>
+            <Typography variant="body1">Duration: {movie.duration} min</Typography>
           </Box>
 
           {/* Release Date */}
           <Box sx={{ marginBottom: 2 }}>
-            <Typography variant='h6'>Release Date:</Typography>
-            <Typography variant='body1'>
+            <Typography variant="h6">Release Date:</Typography>
+            <Typography variant="body1">
               {new Date(movie.releaseDate).toLocaleDateString()}
             </Typography>
           </Box>
@@ -131,10 +108,10 @@ const MovieDetail = () => {
           {movie.trailerLink && (
             <Box>
               <Button
-                variant='contained'
-                color='primary'
+                variant="contained"
+                color="primary"
                 href={movie.trailerLink}
-                target='_blank'
+                target="_blank"
                 sx={{ marginTop: 2 }}
               >
                 Watch Trailer

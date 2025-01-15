@@ -42,7 +42,7 @@ const HomePage = () => {
 
   return (
     <Container>
-      <Typography variant='h4' sx={{ marginBottom: 2 }}>
+      <Typography variant='h4' align="center" gutterBottom sx={{ marginBottom: 2 }}>
         Top Movies
       </Typography>
       <Grid container spacing={3}>

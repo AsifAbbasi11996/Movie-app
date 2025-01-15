@@ -1,5 +1,3 @@
-// src/components/Navbar.js
-
 import React, { useState } from 'react'
 import {
   AppBar,
@@ -52,22 +50,32 @@ const Navbar = () => {
   }
 
   return (
-    <AppBar position='sticky'>
+    <AppBar position="sticky">
       <Toolbar>
         <Typography
-          variant='h6'
+          variant="h6"
           sx={{ flexGrow: 1 }}
           onClick={() => navigate('/')} // Navigate to home when clicked
+          style={{ cursor: 'pointer' }}
         >
           MovieApp
         </Typography>
+
+        {/* All Movies Button */}
+        <Button
+          color="inherit"
+          onClick={() => navigate('/movies')} // Navigate to All Movies page
+          sx={{ marginRight: 2 }}
+        >
+          Top Movies
+        </Button>
 
         {/* Search Bar */}
         <div style={{ position: 'relative', marginRight: '20px' }}>
           <InputBase
             value={searchQuery}
             onChange={handleSearchChange}
-            placeholder='Search Movies…'
+            placeholder="Search Movies…"
             inputProps={{ 'aria-label': 'search' }}
             style={{
               backgroundColor: 'rgba(255, 255, 255, 0.15)',
@@ -77,7 +85,7 @@ const Navbar = () => {
             }}
           />
           <IconButton
-            type='button'
+            type="button"
             onClick={handleSearchSubmit}
             sx={{
               position: 'absolute',
@@ -92,9 +100,9 @@ const Navbar = () => {
 
         {/* User Menu (if logged in) */}
         <IconButton
-          edge='end'
-          color='inherit'
-          aria-label='account'
+          edge="end"
+          color="inherit"
+          aria-label="account"
           onClick={handleMenuClick}
         >
           <AccountIcon />
@@ -104,22 +112,17 @@ const Navbar = () => {
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
         >
-          <MenuItem onClick={() => navigate('/profile')}>Profile</MenuItem>
           <MenuItem onClick={handleLogout}>Logout</MenuItem>
         </Menu>
 
         {/* Login/Register Button (if not logged in) */}
         {!localStorage.getItem('token') && (
-          <Button color='inherit' onClick={() => navigate('/login')}>
-            {' '}
-            {/* Use navigate here */}
+          <Button color="inherit" onClick={() => navigate('/login')}>
             Login
           </Button>
         )}
         {!localStorage.getItem('token') && (
-          <Button color='inherit' onClick={() => navigate('/register')}>
-            {' '}
-            {/* Use navigate here */}
+          <Button color="inherit" onClick={() => navigate('/register')}>
             Register
           </Button>
         )}
