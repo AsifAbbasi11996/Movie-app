@@ -1,4 +1,9 @@
-#Movie App
+# Movie App
+#Website Url
+https://movie-app-kappa-khaki.vercel.app/ 
+
+#Admin url
+https://movie-app-admin-kappa-khaki.vercel.app/ 
 
 login as user
 
@@ -14,4 +19,4 @@ email=admin@test.com
 password=admin123
 
 why login as a admin ?? 
-You will be able to add, edit and delete the movie
+You will be able to add and edit movie
