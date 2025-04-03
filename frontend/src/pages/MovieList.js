@@ -29,8 +29,8 @@ const MovieList = () => {
     const fetchMovies = async () => {
       try {
         const url = sortBy
-          ? `https://movie-app-backend-production-21f6.up.railway.app/api/movies/sorted?sortBy=${sortBy}`
-          : 'https://movie-app-backend-production-21f6.up.railway.app/api/movies' // Default unsorted movies
+          ? `https://movie-app-backend-1-8a7k.onrender.com/api/movies/sorted?sortBy=${sortBy}`
+          : 'https://movie-app-backend-1-8a7k.onrender.com/api/movies' // Default unsorted movies
 
         const response = await axios.get(url)
         setMovies(response.data)
