@@ -1,9 +1,9 @@
 # Movie App
 #Website Url
-https://movie-app-kappa-khaki.vercel.app/ 
+https://movie-app-asif.vercel.app 
 
 #Admin url
-https://movie-app-admin-kappa-khaki.vercel.app/ 
+https://movie-app-asif-admin.vercel.app/
 
 login as user
 
